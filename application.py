@@ -12,6 +12,6 @@ def index():
 def encrypted():
     message = request.form.get("msg")
     key =  int(request.form.get("key"))
-    counts = encrypt(key, message)
-    return render_template("index.html", counts=counts)
+    count = encrypt(key, message)
+    return render_template("index.html", counts=count)
 
